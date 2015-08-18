@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'front/login', as: 'login'
+
+  resources :books
+  resources :users
+
+  root 'front#login'
+  post 'front/auth', as: 'auth'
+  get 'front/logout', as: 'logout'
+
+  #root 'books#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

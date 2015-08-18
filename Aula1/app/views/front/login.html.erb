@@ -1,0 +1,9 @@
+<p id="notice"><%= notice%></p>
+	
+	<%= form_tag(auth_path, method: 'post') do %>
+		<%= email_field_tag :email, nil, size: '30', class: "form_control", placeholder: "Email" %>
+
+		<%= password_field_tag :senha, nil, class: "form-control", placeholder: "senha" %>
+
+		<%= submit_tag "Efetuar Login", class: "btn" %>
+	<% end %>
